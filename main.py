@@ -14,3 +14,6 @@ def about():
 
 
 
+@app.get("/myself")
+def myself():
+    return {"priya is my name"}
