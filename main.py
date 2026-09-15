@@ -1,19 +1,6 @@
 from fastapi import FastAPI
+from app.routers import user_route
 
 app = FastAPI()
 
-@app.get("/")
-def home():
-    return {"message": "Hello, I am learning FastAPI"}
-
-
-@app.get("/about")
-def about():
-    return {"priya is my name"}
-
-
-
-
-@app.get("/myself")
-def myself():
-    return {"priya is my name"}
+app.include_router(user_route)
